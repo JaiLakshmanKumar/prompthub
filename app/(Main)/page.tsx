@@ -1,11 +1,18 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 'use client'
 import React, { useEffect, useState } from 'react'
-import Header from "@/components/Header"
+import Header from "@/components/Layout/Header"
 import Hero from "@/components/Route/Hero"
 import Image from 'next/image'
 import About from "@/components/Route/About";
 import { styles } from "@/utils/style";
+import PromptCard from "@/components/prompts/PromptCard"
+import BestSellers from '@/components/Shop/BestSellers'
+import Future from "@/components/Route/Future"
+import Partners from "@/components/Route/Partners"
+import SellersBanner from '@/components/Shop/SellersBanner'
+import { Divider } from '@nextui-org/react'
+import Footer from "@/components/Layout/Footer"
 type Props = {}
 
 function page({}: Props) {
@@ -41,11 +48,23 @@ function page({}: Props) {
             <h1 className={`${styles.heading} p-2 font-Monserrat`}>
               Latest Prompts
             </h1>
-            <div className="w-full flex flex-wrap mt-5">
-              
+            <div className="flex flex-wrap">
+            <PromptCard />
+            <PromptCard />
+            <PromptCard />
+            <PromptCard />
+            <PromptCard />
+            <PromptCard />
             </div>
             <br />
-            
+            <BestSellers/>
+            <Future/>
+            <Partners/>
+            <SellersBanner/>
+            <br />
+            <br />
+            <Divider className="bg-[#ffffff23]" />
+            <Footer />
           </div>
             
           </div>
